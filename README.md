@@ -1,6 +1,6 @@
 # OpenClaw Skills
 
-Ty Chen 的 OpenClaw 技能集合，均为实际协作中使用并验证过的技能。
+Tino Chen 的 OpenClaw 技能集合，均为实际使用并验证过的技能。
 
 ## 技能列表
 
