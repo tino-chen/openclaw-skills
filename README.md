@@ -29,6 +29,18 @@ Tino Chen 的 OpenClaw 技能集合，均为实际使用并验证过的技能。
 
 详细使用方法见 [note-taking/SKILL.md](note-taking/SKILL.md)
 
+### 📐 workflow-note — 流程构建笔记写作规范
+
+为 workflows/ 分类撰写笔记时的专用写作模板，定义文章结构、内容要求和质量标准。
+
+- 定位：记录「用 AI 搭建自动化流程的完整经验」，区别于 tools/（工具推荐）
+- 文章结构：开头直击痛点 → 最终效果可感知 → 架构图 → 分步实操 → 踩坑记录
+- 实操步骤必须从实际配置文件读取完整内容，不能简略描述
+- 与 note-taking 分层协作：note-taking 管全局规范，workflow-note 管分类模板
+- ClawHub：`workflow-note`
+
+详细使用方法见 [workflow-note/SKILL.md](workflow-note/SKILL.md)
+
 ### 🔍 debunk — 事实核查与辟谣
 
 对公众号/社交媒体链接、图片、视频等内容进行事实核查，输出结构化分析报告和多种风格的回复话术。
@@ -48,6 +60,7 @@ Tino Chen 的 OpenClaw 技能集合，均为实际使用并验证过的技能。
 ```bash
 openclaw skills install daily-ai-briefing
 openclaw skills install note-taking
+openclaw skills install workflow-note
 openclaw skills install debunk
 ```
 
