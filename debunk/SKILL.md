@@ -38,9 +38,9 @@ clawhub: https://clawhub.com/skills/debunk
   node ~/.openclaw/skills/debunk/scripts/fetch-url.js "<url>" --max-chars 15000
   ```
   最后提示用户复制粘贴文字内容
-- **截图**：描述截图中的文字内容（OCR）
+- **截图**：用 `zai-mcp-server__extract_text_from_screenshot`（智谱 MCP）提取文字内容；若未配置该 MCP，依赖模型原生视觉能力
 - **文字**：直接使用
-- **视频**：用 `zai-mcp-server__analyze_video`（OpenClaw 内置 MCP 工具）提取关键帧和内容
+- **视频**：用 `zai-mcp-server__analyze_video`（智谱 MCP）提取关键帧和内容；若未配置该 MCP，提示用户手动描述
 
 ### 步骤 2：提取核心论点
 
