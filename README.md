@@ -25,6 +25,7 @@ Tino Chen 的 OpenClaw 技能集合，均为实际使用并验证过的技能。
 - 三种文档类型：知识（knowledge）、教程（guide）、经验（experience）
 - 通用模板：含 type、title、tags 的 YAML front matter
 - 适配 VitePress 构建，支持 GitHub Pages 部署
+- ClawHub：`note-taking`
 
 详细使用方法见 [note-taking/SKILL.md](note-taking/SKILL.md)
 
