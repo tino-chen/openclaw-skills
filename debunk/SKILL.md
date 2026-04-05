@@ -3,6 +3,7 @@ name: debunk
 description: 事实核查与辟谣工具。当用户提供链接/图片/视频/文字要求事实核查时触发。覆盖两类场景：自查信息真伪，或核查别人分享的内容并生成回复。
 repository: https://github.com/tino-chen/openclaw-skills/tree/main/debunk
 clawhub: https://clawhub.com/skills/debunk
+guide: https://tino-chen.github.io/notes/workflows/debunk.html
 ---
 
 # 事实核查

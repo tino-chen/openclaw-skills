@@ -4,6 +4,7 @@ description: 每日AI硬核进展简报的质量规范与执行流程。定义�
 isolated: true
 repository: https://github.com/tino-chen/openclaw-skills/tree/main/daily-ai-briefing
 clawhub: https://clawhub.com/skills/daily-ai-briefing
+guide: https://tino-chen.github.io/notes/workflows/daily-ai-briefing.html
 ---
 
 # 角色与目标
