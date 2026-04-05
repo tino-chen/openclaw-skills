@@ -30,13 +30,13 @@ clawhub: https://clawhub.com/skills/debunk
 根据用户提供的信息类型：
 - **公众号/视频号 URL**（`mp.weixin.qq.com`）：优先用 Playwright 脚本，公众号有反爬机制
   ```bash
-  node ~/.openclaw/skills/fact-checker/scripts/fetch-url.js "<url>" --max-chars 15000
+  node ~/.openclaw/skills/debunk/scripts/fetch-url.js "<url>" --max-chars 15000
   ```
   若脚本失败则回退到提示用户复制粘贴。
 - **其他 URL**：用 `web_fetch` 抓取页面正文。若失败（反爬），回退到 Playwright 脚本，最后提示用户复制粘贴文字内容
 - **截图**：描述截图中的文字内容（OCR）
 - **文字**：直接使用
-- **视频**：用 `zai-mcp-server__analyze_video` 提取关键帧和内容
+- **视频**：用 `zai-mcp-server__analyze_video`（OpenClaw 内置 MCP 工具）提取关键帧和内容
 
 ### 步骤 2：提取核心论点
 
@@ -225,3 +225,27 @@ D. 💤 敷衍了事版：一条通用的短回复，快速结束对话
 - 回复话术：**纯文本**，方便复制粘贴到微信/飞书
 - 回复话术长度：200-400 字为宜（群聊场景）
 - 每条核查引用必须包含**来源名称 + 一句话概括 + 链接**
+
+---
+
+## 安装与依赖
+
+### Playwright 浏览器
+
+反爬抓取脚本依赖 Playwright + Chromium。安装技能后需执行：
+
+```bash
+npx playwright install chromium
+```
+
+### 外部工具
+
+本技能在执行过程中可能调用以下 OpenClaw 内置工具，无需额外安装：
+
+| 工具 | 用途 | 说明 |
+|------|------|------|
+| `web_search` | 搜索权威来源 | OpenClaw 内置 |
+| `web_fetch` | 抓取网页正文 | OpenClaw 内置 |
+| `zai-mcp-server__analyze_video` | 视频内容分析 | OpenClaw 内置 MCP |
+
+这些工具由 OpenClaw 运行时提供，数据仅用于本次核查，不会上传至第三方服务。

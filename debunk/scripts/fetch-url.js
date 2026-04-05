@@ -10,12 +10,36 @@
  */
 
 const { chromium } = require('playwright');
+const { URL } = require('url');
+
+// Block private/internal URLs to prevent SSRF
+function isBlocked(urlStr) {
+  try {
+    const url = new URL(urlStr);
+    const hostname = url.hostname.toLowerCase();
+    // Block localhost and loopback
+    if (hostname === 'localhost' || hostname === '127.0.0.1' || hostname === '::1' || hostname === '0.0.0.0') return true;
+    // Block private IP ranges (10.x, 172.16-31.x, 192.168.x)
+    if (/^(10\.|172\.(1[6-9]|2\d|3[01])\.|192\.168\.)/.test(hostname)) return true;
+    // Block .local domains
+    if (hostname.endsWith('.local') || hostname.endsWith('.internal')) return true;
+    // Only allow http/https
+    if (!['http:', 'https:'].includes(url.protocol)) return true;
+    return false;
+  } catch {
+    return true; // Invalid URL
+  }
+}
 
 async function main() {
   const args = process.argv.slice(2);
   const url = args.find(a => !a.startsWith('--'));
   if (!url) {
     console.error('Usage: fetch-url.js <url> [--max-chars 15000] [--wait-ms 3000]');
+    process.exit(1);
+  }
+  if (isBlocked(url)) {
+    console.error('ERROR: Blocked URL — private/internal addresses are not allowed for security reasons.');
     process.exit(1);
   }
 
