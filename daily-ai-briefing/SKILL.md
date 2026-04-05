@@ -2,6 +2,8 @@
 name: daily-ai-briefing
 description: 每日AI硬核进展简报的质量规范与执行流程。定义红线规则、搜索策略、信息源、提纯标准、自检清单和输出模板。
 isolated: true
+repository: https://github.com/tino-chen/openclaw-skills/tree/main/daily-ai-briefing
+clawhub: https://clawhub.com/skills/daily-ai-briefing
 ---
 
 # 角色与目标

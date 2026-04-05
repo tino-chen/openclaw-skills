@@ -1,8 +1,8 @@
 ---
 name: note-taking
-description: |
-  笔记创建与管理的规范指南。当需要创建新笔记、管理笔记目录时使用此 skill。
-  包含：笔记层级结构、语言规范、命名规则、通用模板。
+description: 笔记创建与管理的规范指南。当需要创建新笔记、管理笔记目录时使用此 skill。包含：笔记层级结构、语言规范、命名规则、通用模板。
+repository: https://github.com/tino-chen/openclaw-skills/tree/main/note-taking
+clawhub: https://clawhub.com/skills/note-taking
 ---
 
 # 笔记管理系统规范
