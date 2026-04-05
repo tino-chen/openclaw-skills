@@ -6,17 +6,25 @@ Tino Chen 的 OpenClaw 技能集合，均为实际使用并验证过的技能。
 
 ### 📰 daily-ai-briefing — 每日 AI 硬核进展简报
 
-每天自动检索全球 AI 领域的重大研究、开源热点和行业动态，生成高质量简报并推送到飞书。
+每天自动检索全球 AI 领域的重大研究、开源热点和行业动态，生成高质量中文简报并推送到飞书。
 
-- 7 条红线规则确保质量（一票否决）
-- 跨天去重、来源白名单、四要素校验
+- 7 条一票否决红线规则确保质量（14 天时效、来源白名单、四要素校验等）
+- 跨天去重机制，避免同一事件重复出现
+- 重点关注信息源 + 多源交叉搜索策略
 - 配合 OpenClaw Cron 实现全自动运行
+- ClawHub：`daily-ai-briefing`
 
 详细使用方法见 [daily-ai-briefing/SKILL.md](daily-ai-briefing/SKILL.md)
 
 ### 📝 note-taking — 笔记创建与管理规范
 
-结构化知识库的笔记编写规范，包含层级结构、语言规范、命名规则和通用模板。
+结构化知识库的笔记编写规范，确保笔记层级清晰、命名统一、格式一致。
+
+- 笔记层级：一级导航（英文 kebab-case）→ 二级分组 → 笔记文档
+- 语言规范：导航/分组用英文，笔记内容用中文
+- 三种文档类型：知识（knowledge）、教程（guide）、经验（experience）
+- 通用模板：含 type、title、tags 的 YAML front matter
+- 适配 VitePress 构建，支持 GitHub Pages 部署
 
 详细使用方法见 [note-taking/SKILL.md](note-taking/SKILL.md)
 
