@@ -242,10 +242,11 @@ npx playwright install chromium
 
 本技能在执行过程中可能调用以下 OpenClaw 内置工具，无需额外安装：
 
-| 工具 | 用途 | 说明 |
+| 工具 | 用途 | 来源 |
 |------|------|------|
 | `web_search` | 搜索权威来源 | OpenClaw 内置 |
 | `web_fetch` | 抓取网页正文 | OpenClaw 内置 |
-| `zai-mcp-server__analyze_video` | 视频内容分析 | OpenClaw 内置 MCP |
+| `zai-mcp-server__extract_text_from_screenshot` | 截图 OCR 文字提取 | 智谱 MCP（需配置） |
+| `zai-mcp-server__analyze_video` | 视频内容分析 | 智谱 MCP（需配置） |
 
-这些工具由 OpenClaw 运行时提供，数据仅用于本次核查，不会上传至第三方服务。
+`web_search` 和 `web_fetch` 为 OpenClaw 内置工具，开箱即用。`zai-mcp-server__*` 系列工具由智谱提供，需在 OpenClaw MCP 配置中添加智谱服务后才能使用；若未配置，截图场景将依赖模型原生视觉能力，视频场景将提示用户手动描述内容。
