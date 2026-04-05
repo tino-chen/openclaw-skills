@@ -33,7 +33,11 @@ clawhub: https://clawhub.com/skills/debunk
   node ~/.openclaw/skills/debunk/scripts/fetch-url.js "<url>" --max-chars 15000
   ```
   若脚本失败则回退到提示用户复制粘贴。
-- **其他 URL**：用 `web_fetch` 抓取页面正文。若失败（反爬），回退到 Playwright 脚本，最后提示用户复制粘贴文字内容
+- **其他 URL**：用 `web_fetch` 抓取页面正文。若失败（反爬），回退到 Playwright 脚本：
+  ```bash
+  node ~/.openclaw/skills/debunk/scripts/fetch-url.js "<url>" --max-chars 15000
+  ```
+  最后提示用户复制粘贴文字内容
 - **截图**：描述截图中的文字内容（OCR）
 - **文字**：直接使用
 - **视频**：用 `zai-mcp-server__analyze_video`（OpenClaw 内置 MCP 工具）提取关键帧和内容
